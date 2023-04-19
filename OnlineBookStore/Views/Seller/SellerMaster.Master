@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SellerMaster.master.cs" Inherits="OnlineBookStore.Views.Seller.SellerMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Book Store</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        #left {
+            color: white;
+            height: 900px;
+            background-color: lightslategray;
+        }
+    </style>
+    <link rel="stylesheet" href="../../Assets/Libs/css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2" id="left">
+                <div style="height: 90px">
+                </div>
+                <div class="mb-3 mt-3">
+                    <asp:Image ID="image1" runat="server" ImageUrl="~/Assets/Images/Books.JPG" Height="50" Width="50" />
+                    <a href="~/Views/Auth/Login.aspx" style="text-decoration: none">
+                        <asp:Label ID="lblLogout" runat="server" Text="Logout" Font-Size="X-Large" ForeColor="Black" Font-Bold="true"></asp:Label>
+                    </a>
+                </div>
+            </div>
+            <div class="col-10">
+                <form id="form1" runat="server">
+                    <div>
+                        <asp:ContentPlaceHolder ID="MyContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
